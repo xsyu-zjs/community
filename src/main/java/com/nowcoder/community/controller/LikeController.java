@@ -37,7 +37,7 @@ public class LikeController implements CommunityConstant {
     @ResponseBody
     public String like(int entityType, int entityId, int entityUserId, int postId) {
         User user = hostHolder.getUser();
-
+        System.out.println(hostHolder.getUser());
         // 点赞
         likeService.like(user.getId(), entityType, entityId, entityUserId);
 
